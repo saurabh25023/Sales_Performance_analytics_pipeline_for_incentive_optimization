@@ -39,7 +39,7 @@ def decrypt(enc):
     return unpad(cipher.decrypt(base64.b64decode(enc))).decode('utf8')
 
 
-# print
-# print
+
+
 #print(decrypt("123"))
 #print(decrypt("123"))
