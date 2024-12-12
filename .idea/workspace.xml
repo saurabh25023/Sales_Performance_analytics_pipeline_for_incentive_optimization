@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Sales_Performance_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/architecture" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/database_schema.drawio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/dev/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/dev/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/prod/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/prod/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/qa/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/qa/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sql_scripts/table_scripts.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/delete/aws_delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/delete/database_delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/delete/local_file_delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/download/aws_file_download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/move/move_files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/read/aws_read.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/read/database_read.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/transformations/jobs/customer_mart_sql_tranform_write.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/transformations/jobs/dimension_tables_join.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/transformations/jobs/sales_mart_calculation_table_write.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/upload/upload_to_s3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utility/logging_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utility/my_sql_session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utility/s3_client_object.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utility/spark_session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/write/database_write.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/write/parquet_writer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/expetiment1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/extra_column_csv_generated_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/generate_csv_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/generate_customer_table_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/generate_datewise_sales_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/less_column_csv_generated_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scratch_pad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test111.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/transaction2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/transaction_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/transaction_data2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/transaction_data5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/transactional_1.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2q0kHgelae78Yqhsy1KlKaKCsBy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.config.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/suraj/PycharmProjects/Sales_Performance_project",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\suraj\PycharmProjects\Sales_Performance_project" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="" />
+      <created>1733806793465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733806793465</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
