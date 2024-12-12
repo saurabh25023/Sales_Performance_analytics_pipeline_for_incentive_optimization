@@ -39,7 +39,7 @@ def decrypt(enc):
     return unpad(cipher.decrypt(base64.b64decode(enc))).decode('utf8')
 
 
-print(encrypt("123")) #aws_access_key
-print(encrypt("123")) #aws_secret key
+# print(encrypt("sample_access_key")) #aws_access_key
+# print(encrypt("sample_secret key")) #aws_secret key
 #print(decrypt("123"))
 #print(decrypt("123"))
