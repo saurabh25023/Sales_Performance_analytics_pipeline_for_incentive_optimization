@@ -6,9 +6,9 @@ iv = "youtube_encyptyo"
 salt = "youtube_AesEncryption"
 
 #AWS Access And Secret key
-aws_access_key = Credentials.aws_access_key
-aws_secret_key = Credentials.aws_secret_key
-bucket_name = Credentials.bucket_name
+aws_access_key = "your aws access key"
+aws_secret_key = "your aws secret key"
+bucket_name = "your aws bucket name"
 s3_customer_datamart_directory = "customer_data_mart"
 s3_sales_datamart_directory = "sales_data_mart"
 s3_source_directory = "sales_data/"
