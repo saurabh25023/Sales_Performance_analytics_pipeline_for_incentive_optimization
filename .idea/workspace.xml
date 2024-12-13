@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="Updating Project 10001">
+    <list default="true" id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="Updating Project 10002">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/upload/upload_to_s3.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/upload/upload_to_s3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +43,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Credentials.executor": "Run",
     "Python.config.executor": "Run",
+    "Python.encrypt_decrypt.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.s3_client_object.executor": "Run",
+    "Python.sales_data_upload_s3.executor": "Run",
+    "Python.upload_to_s3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/suraj/PycharmProjects/Sales_Performance_project",

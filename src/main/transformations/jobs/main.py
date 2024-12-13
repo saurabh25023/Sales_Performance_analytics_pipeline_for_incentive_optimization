@@ -34,7 +34,7 @@ s3_client = s3_client_provider.get_client()
 ##### Now you can use s3_client for your S3 operations
 
 response = s3_client.list_buckets()
-#print(response)
+print(response)
 logger.info("List of Buckets: %s", response['Buckets'])
 
 # check if local directory has already a file

@@ -19,5 +19,5 @@ def upload_to_s3(s3_directory, s3_bucket, local_file_path):
         raise e
 
 s3_directory = "sales_data/"
-s3_bucket = "youtube-project-testing"
+s3_bucket = config.bucket_name
 upload_to_s3(s3_directory, s3_bucket, local_file_path)

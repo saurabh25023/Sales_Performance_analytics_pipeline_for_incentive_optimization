@@ -1,4 +1,5 @@
 from src.main.utility.logging_config import *
+from resources.dev import config
 import traceback
 import datetime
 import os
@@ -28,5 +29,5 @@ class UploadToS3:
             raise e
 local_file_path = "C:\\Users\\suraj\\Desktop\\Saurabh\\Project\\uploadToS3"
 s3_directory = "sales_data/"
-s3_bucket = "myoutube-project1"
+s3_bucket = config.bucket_name
 upload_to_s3(s3_directory, s3_bucket, local_file_path)
