@@ -82,4 +82,3 @@ Database ER Diagram:-
 ![Architecture](C:\Users\nikita\Documents\data_engineering\pythonProject\youtube_project\docs\database_schema.drawio.png)
 
 If you get stuck, don't forget to my watch my youtube channel project playlist for better understanding of the flow.
-My youtube channel link:- https://www.youtube.com/channel/UCacvJAgrPTjSEdnZObMzpqQ
