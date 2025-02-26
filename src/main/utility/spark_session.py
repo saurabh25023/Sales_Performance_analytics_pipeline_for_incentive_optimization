@@ -9,10 +9,15 @@ from src.main.utility.logging_config import *
 def spark_session():
     spark = SparkSession.builder.master("local[*]") \
         .appName("manish_spark2")\
-        .config("spark.driver.extraClassPath", "C:\Program Files\\MySqlJar\\mysql-connector-j-8.4.0\\mysql-connector-j-8.4.0.jar") \
         .getOrCreate()
     logger.info("spark session %s",spark)
     return spark
 
 
-#"C:\Program Files\\MySqlJar\\mysql-connector-j-8.4.0\\mysql-connector-j-8.4.0.jar"
+#C:\\Program Files\\spark\\spark-3.4.4-bin-hadoop3\\jars\\mysql-connector-j-9.2.0.jar
+
+
+# .config("spark.driver.extraClassPath",
+#         "C:\\Program Files\\spark\\spark-3.4.4-bin-hadoop3\\jars\\mysql-connector-j-9.2.0.jar") \
+
+spark_session()

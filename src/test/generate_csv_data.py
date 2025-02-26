@@ -24,13 +24,24 @@ sales_persons = {
 start_date = datetime(2023, 3, 3)
 end_date = datetime(2023, 8, 20)
 
-file_location = "C:\\Users\\suraj\\Desktop\\Saurabh\\Project\\generated_CSV_data"
-csv_file_path = os.path.join(file_location, "sales_data.csv")
+input_date = datetime.strftime(end_date,"%Y-%m-%d")
+timestamp3 = datetime.now().strftime("_%H-%M-%S")
+
+
+print(input_date + timestamp3)
+
+file_location = "C:\\Users\\Saurabh\\Documents\\generated_csv_data\\normal_column_csv_generated_data"
+
+if not os.path.exists(file_location):
+    os.makedirs(file_location)
+
+
+csv_file_path = os.path.join(file_location, f"sales_data_{input_date + timestamp3}.csv")
 with open(csv_file_path, "w", newline="") as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(["customer_id", "store_id", "product_name", "sales_date", "sales_person_id", "price", "quantity", "total_cost"])
 
-    for _ in range(500):
+    for _ in range(10000):
         customer_id = random.choice(customer_ids)
         store_id = random.choice(store_ids)
         product_name = random.choice(list(product_data.keys()))

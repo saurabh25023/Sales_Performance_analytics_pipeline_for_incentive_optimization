@@ -1,14 +1,14 @@
 import os
 from resources.dev import Credentials
 
-key = "youtube_project"
-iv = "youtube_encyptyo"
-salt = "youtube_AesEncryption"
+key = Credentials.key
+iv = Credentials.iv
+salt = Credentials.salt
 
 #AWS Access And Secret key
-aws_access_key = "your aws access key"
-aws_secret_key = "your aws secret key"
-bucket_name = "your aws bucket name"
+aws_access_key = Credentials.aws_access_key
+aws_secret_key = Credentials.aws_secret_key
+bucket_name = "sales-performance-analytics-bucket"
 s3_customer_datamart_directory = "customer_data_mart"
 s3_sales_datamart_directory = "sales_data_mart"
 s3_source_directory = "sales_data/"
@@ -21,6 +21,7 @@ s3_processed_directory = "sales_data_processed"
 database_name = Credentials.database_name
 url = f"jdbc:mysql://localhost:3306/{database_name}"
 properties = {
+    "host":"localhost",
     "user": "root",
     "password": Credentials.db_password,
     "driver": "com.mysql.cj.jdbc.Driver"
@@ -42,8 +43,8 @@ mandatory_columns = ["customer_id","store_id","product_name","sales_date","sales
 
 
 # File Download location
-local_directory = "C:\\Users\\suraj\\Desktop\\Saurabh\Project\\Project_directory\\file_from_s3\\"
-customer_data_mart_local_file = "C:\\Users\\suraj\\Desktop\\Saurabh\Project\\Project_directory\\customer_data_mart\\"
-sales_team_data_mart_local_file = "C:\\Users\\suraj\\Desktop\\Saurabh\Project\\Project_directory\\sales_team_data_mart\\"
-sales_team_data_mart_partitioned_local_file = "C:\\Users\\suraj\\Desktop\\Saurabh\Project\\Project_directory\\sales_partition_data\\"
-error_folder_path_local = "C:\\Users\\suraj\\Desktop\\Saurabh\Project\\Project_directory\\error_files\\"
+local_directory = "C:\\Users\\Saurabh\\Documents\\sales_performance_project\\file_from_s3\\"
+customer_data_mart_local_file = "C:\\Users\\Saurabh\\Documents\\sales_performance_project\\customer_data_mart\\"
+sales_team_data_mart_local_file = "C:\\Users\\Saurabh\\Documents\\sales_performance_project\\sales_team_data_mart\\"
+sales_team_data_mart_partitioned_local_file = "C:\\Users\\Saurabh\\Documents\\sales_performance_project\\sales_partition_data\\"
+error_folder_path_local = "C:\\Users\\Saurabh\\Documents\\sales_performance_project\\error_files\\"

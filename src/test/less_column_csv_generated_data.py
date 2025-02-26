@@ -2,6 +2,13 @@ import os
 import csv
 import random
 from datetime import datetime
+from time import strftime
+
+current_date = datetime.now()
+
+timestamp2 = current_date.strftime("_%H-%M-%S")
+
+# print(timestamp2)
 
 customer_ids = list(range(1, 21))
 product_data = {
@@ -20,7 +27,7 @@ sales_persons = {
     123: [7, 8, 9]
 }
 
-file_location = "C:\\Users\\suraj\\Desktop\\Saurabh\\Project\\generated_CSV_data\\lesscolumn_csv_generated_data\\spark_data"
+file_location = "C:\\Users\\Saurabh\\Documents\\generated_csv_data\\lesscolumn_csv_generated_data"
 
 
 if not os.path.exists(file_location):
@@ -29,7 +36,7 @@ if not os.path.exists(file_location):
 input_date_str = input("Enter the date for which you want to generate (YYYY-MM-DD): ")
 input_date = datetime.strptime(input_date_str, "%Y-%m-%d")
 
-csv_file_path = os.path.join(file_location, f"sales_data_{input_date_str}.csv")
+csv_file_path = os.path.join(file_location, f"sales_data_{input_date_str+timestamp2}.csv")
 with open(csv_file_path, "w", newline="") as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(["customer_id", "product_name", "sales_date", "sales_person_id", "price", "quantity", "total_cost", "payment_mode"])

@@ -1,11 +1,14 @@
 import mysql.connector
+from botocore.credentials import Credentials
+from resources.dev import config
+from resources.dev.Credentials import *
 
 def get_mysql_connection():
     connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Skandmata@5",
-        database="youtube_project",
+        host=config.properties['host'],
+        user=config.properties['user'],
+        password= config.properties['password'],
+        database=  config.database_name,
         ssl_disabled=True
     )
     return connection

@@ -38,8 +38,4 @@ def decrypt(enc):
     cipher = AES.new(get_private_key(), AES.MODE_CBC, iv.encode('utf-8'))
     return unpad(cipher.decrypt(base64.b64decode(enc))).decode('utf8')
 
-# print(encrypt(""))
-# print(encrypt(""))
 
-#print(decrypt(""))
-#print(decrypt(""))

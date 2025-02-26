@@ -23,6 +23,11 @@ from resources.dev.config import *
 from src.main.transformations.jobs.dimension_tables_join import *
 from src.main.write.parquet_writer import ParquetWriter
 
+#1********************************************************************************************************************
+#1********************************* Job1 = Prerequisite *****************************************************************************
+#1********************************************************************************************************************
+
+
 ############# Get S3 Client ###################
 aws_access_key = config.aws_access_key
 aws_secret_key = config.aws_secret_key
@@ -37,10 +42,10 @@ response = s3_client.list_buckets()
 print(response)
 logger.info("List of Buckets: %s", response['Buckets'])
 
-# check if local directory has already a file
-# if file is there then check if the same file is present in the staging area
-# with status as A. If so, then don't delete and try to re-run
-# else, give an error and do not process the next file
+# (1). check if local directory has already a file
+#   (a). If there is a file then check if the same file is present in the staging area with status as 'A'
+#           If so, then don't delete and try to re-run
+#   (b). Else, give an error and do not process the next file.
 
 csv_files = [file for file in os.listdir(config.local_directory) if file.endswith(".csv")]
 print("check1001")
@@ -48,6 +53,11 @@ print("csv_files=",csv_files)
 
 connection = get_mysql_connection()
 cursor = connection.cursor()
+
+print("----check MySQL----")
+print("connection=",connection)
+print("cursor=",cursor)
+
 
 total_csv_files = []
 print("check1002")
@@ -57,13 +67,14 @@ if csv_files:
         total_csv_files.append(file)
 
     print("total_csv_files=",total_csv_files)
-    statement = f"""select distinct file_name from youtube_project.product_staging_table
-                    where file_name in ({str(total_csv_files)[1:-1]}) and status = 'A'
+    statement = f"""select distinct file_name from {config.database_name}.{config.product_staging_table}
+                    where file_name in ({str(total_csv_files)[1:-1]}) and status = 'A' ;
                 """
 
     logger.info(f"dynamically statement created: {statement} ")
     cursor.execute(statement)
     data = cursor.fetchall()
+    print('data--->',data)
 
     if data:
         logger.info("Your last run was failed please check")
@@ -74,8 +85,14 @@ if csv_files:
 else:
     logger.info("last run was successful!!!")
 
+#1*********************J1check1 is completed****************************************************************
+
+# (2).checking files at s3 bucket
+#       (a). if available then, print their absolute path
+#       (b). if not available then raise exception -- no data available to process.
+#
 try:
-    s3_reader = S3Reader()
+    s3_reader = S3Reader() #3330
     # Bucket name should come from table
     folder_path = config.s3_source_directory
     s3_absolute_file_path = s3_reader.list_files(s3_client, config.bucket_name, folder_path=folder_path)
@@ -89,8 +106,16 @@ except Exception as e:
     logger.error("Exited with error:- %s", e)
     raise e
 
+#1********************************* J1check2 is completed **************************************************
+
 #['s3://myoutube-project1/sales_data/file1.csv', 's3://myoutube-project1/sales_data/file2.csv', 's3://myoutube-project1/sales_data/file3.txt']
 ##########################################
+
+#2******************************************************************************************************************
+#2******************************************** Job2 = Download to local ***************************************************************
+#2*******************************************************************************************************************
+
+# J2Check1 --- Downloading files from s3 to local_directory
 
 bucket_name = config.bucket_name
 local_directory = config.local_directory
@@ -110,11 +135,15 @@ except Exception as e:
     logger.error("File download error: %s", e)
     sys.exit()
 
+# J2Check2 -- Check downloaded files --
+#
 #Get a list of all files in the local directory
+
 all_files = os.listdir(local_directory)
 logger.info(f"List of files present at my local directory after download {all_files}")
 
-# Filter files with ".csv" in their names and create absolute paths
+# J2Check3 -- check *.csv files at local
+#           Filter files with ".csv" in their names and create absolute paths
 
 if all_files:
     csv_files = []
@@ -130,13 +159,17 @@ if all_files:
         raise Exception("No csv data available to process the request")
 
 else:
-    logger.error("There is no data to process")
-    raise Exception("There is no data to process.")
+    logger.error("There is nothing data to process at local.")
+    raise Exception("There is nothing data to process at local.")
 
-#######################################################
+#J2Check4 -- list a final total no. of csv files that are going to process
 
 logger.info("*************************Listing the File*********************")
 logger.info("List of csv files that needs to be processed %s", csv_files)
+
+#********************************************************************************************************************
+#**************************** Job3 = spark session ******************************************************************
+#********************************************************************************************************************
 
 logger.info("***************Creating spark session*********************")
 
@@ -195,6 +228,10 @@ if error_files:
     else:
         logger.info("************* There is no error files available at our dataset ********************")
 
+#********************************************************************************************************************
+#*************************************** Job 4 = additonal column ***************************************************
+#********************************************************************************************************************
+
 #Additional columns needs to be taken care of
 # Determine extra columns
 
@@ -208,14 +245,20 @@ current_date = datetime.datetime.now()
 formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
 if correct_files:
     for file in correct_files:
+
         filename = os.path.basename(file)
-        statements = f"""
+        file = fr'{file}'
+        statements = rf"""
                 INSERT INTO {db_name}.{config.product_staging_table}
                 (file_name, file_location, created_date, status)
                 VALUES('{filename}','{file}','{formatted_date}','A')
                  """
+        print('#################  Check 223  ###########################################################')
+        print('file_name-->', filename)
+        print('file_location-->', file)
 
         insert_statements.append(statements)
+
 
     logger.info(f"Insert statement created for staging table ----{insert_statements}")
     logger.info("*********************Connecting to MySQL server*************************")
@@ -249,6 +292,9 @@ schema = StructType([
 #Connecting with DatabaseReader
 database_client = DatabaseReader(config.url,config.properties)
 logger.info("********************** creating empty dataframe *************************")
+# final_df_to_process = spark.createDataFrame([],schema)
+# final_df_to_process.show()
+
 final_df_to_process = database_client.create_dataframe(spark,"empty_df_create_table")
 final_df_to_process.show()
 
@@ -273,6 +319,7 @@ for data in correct_files:
     final_df_to_process = final_df_to_process.union(data_df)
 
 logger.info("********************Final DataFrame from source which will be going to processing")
+print("final_df_to_process--->")
 final_df_to_process.show()
 
 #Enrich the data from all dimension table

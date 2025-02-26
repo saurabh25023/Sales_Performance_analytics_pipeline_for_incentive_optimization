@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="Updating Project 10002">
+      <change beforePath="$PROJECT_DIR$/.idea/Sales_Performance_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sales_Performance_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/dev/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dev/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sql_scripts/table_scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sql_scripts/table_scripts.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/upload/upload_to_s3.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/upload/upload_to_s3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utility/my_sql_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/my_sql_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utility/spark_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/spark_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/extra_column_csv_generated_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/extra_column_csv_generated_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/generate_csv_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/generate_csv_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/less_column_csv_generated_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/less_column_csv_generated_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +40,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;saurabh25023&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/saurabh25023/Sales_Performance_analytics_pipeline_for_incentive_optimization.git&quot;,
+    &quot;accountId&quot;: &quot;313cf142-9ca3-4c37-9051-bab17fb75492&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/transformations/jobs/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -44,13 +67,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Credentials.executor": "Run",
+    "Python.aws_read.executor": "Run",
+    "Python.check_files_on_s3.executor": "Run",
     "Python.config.executor": "Run",
     "Python.encrypt_decrypt.executor": "Run",
+    "Python.extra_column_csv_generated_data.executor": "Run",
+    "Python.generate_csv_data.executor": "Run",
+    "Python.less_column_csv_generated_data.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.my_sql_session.executor": "Run",
     "Python.s3_client_object.executor": "Run",
     "Python.sales_data_upload_s3.executor": "Run",
+    "Python.spark_session.executor": "Run",
+    "Python.test_spark_writing.executor": "Run",
     "Python.upload_to_s3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/suraj/PycharmProjects/Sales_Performance_project",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
@@ -64,7 +96,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-fc1d50d2d915-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.24978.54" />
       </set>
     </attachedChunks>
   </component>
@@ -110,5 +142,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updating Project 10001" />
     <option name="LAST_COMMIT_MESSAGE" value="Updating Project 10001" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/main/read/aws_read.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

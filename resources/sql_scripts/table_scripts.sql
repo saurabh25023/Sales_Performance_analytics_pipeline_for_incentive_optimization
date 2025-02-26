@@ -134,7 +134,7 @@ CREATE TABLE s3_bucket_info (
 
 --s3 bucket data
 INSERT INTO s3_bucket_info (bucket_name, status, created_date, updated_date)
-VALUES ('myoutube-project1', 'active', NOW(), NOW());
+VALUES ('sales-performance-analytics-bucket', 'active', NOW(), NOW());
 
 
 --Data Mart customer
