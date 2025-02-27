@@ -143,7 +143,7 @@ CREATE TABLE customers_data_mart (
     full_name VARCHAR(100),
     address VARCHAR(200),
     phone_number VARCHAR(20),
-    sales_date_month DATE,
+    sales_date_month VARCHAR(7),
     total_sales DECIMAL(10, 2)
 );
 

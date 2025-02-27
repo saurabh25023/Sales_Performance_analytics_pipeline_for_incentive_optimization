@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="Updating Project 10002">
-      <change beforePath="$PROJECT_DIR$/.idea/Sales_Performance_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sales_Performance_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a8d00eee-a4ec-4dbf-94fc-762596aedec5" name="Changes" comment="Updating Project 10002 -modified Credentials, added many comments to make jobs for airflow etc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/dev/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/dev/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sql_scripts/table_scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sql_scripts/table_scripts.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/transformations/jobs/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/encrypt_decrypt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utility/my_sql_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/my_sql_session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utility/spark_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utility/spark_session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/extra_column_csv_generated_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/extra_column_csv_generated_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/generate_csv_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/generate_csv_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/less_column_csv_generated_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/less_column_csv_generated_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/sales_data_upload_s3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +44,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/transformations/jobs/main.py" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -64,30 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Credentials.executor": "Run",
-    "Python.aws_read.executor": "Run",
-    "Python.check_files_on_s3.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.encrypt_decrypt.executor": "Run",
-    "Python.extra_column_csv_generated_data.executor": "Run",
-    "Python.generate_csv_data.executor": "Run",
-    "Python.less_column_csv_generated_data.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.my_sql_session.executor": "Run",
-    "Python.s3_client_object.executor": "Run",
-    "Python.sales_data_upload_s3.executor": "Run",
-    "Python.spark_session.executor": "Run",
-    "Python.test_spark_writing.executor": "Run",
-    "Python.upload_to_s3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/suraj/PycharmProjects/Sales_Performance_project",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Credentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python.aws_read.executor&quot;: &quot;Run&quot;,
+    &quot;Python.check_files_on_s3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.encrypt_decrypt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extra_column_csv_generated_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_csv_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.less_column_csv_generated_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.my_sql_session.executor&quot;: &quot;Run&quot;,
+    &quot;Python.s3_client_object.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sales_data_upload_s3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.spark_session.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_spark_writing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.upload_to_s3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/suraj/PycharmProjects/Sales_Performance_project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\suraj\PycharmProjects\Sales_Performance_project" />
@@ -125,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734001906883</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updating Project 10002 -modified Credentials, added many comments to make jobs for airflow etc.">
+      <option name="closed" value="true" />
+      <created>1740574462586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740574462586</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,7 +141,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updating Project 10001" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating Project 10001" />
+    <MESSAGE value="Updating Project 10002 -modified Credentials, added many comments to make jobs for airflow etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating Project 10002 -modified Credentials, added many comments to make jobs for airflow etc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
